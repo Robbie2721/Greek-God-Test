@@ -1,0 +1,169 @@
+import math
+
+Zeus = 0
+Hera = 0
+Aphrodite = 0
+Apollo = 0
+Ares = 0
+Artemis = 0
+Athena = 0
+Hades = 0
+Hermes = 0
+Poseidon = 0
+Demeter = 0
+Hephaestus = 0
+
+
+q1 = int(input("Which one of these is your favorite animal? Eagle(1), Lion(2), Owl(3), Crow(4), Fish(5), Cow(6), or None(7):"))
+if q1 == 1:
+    Zeus = Zeus + 3
+    Hera = Hera + 1
+elif q1 == 2:
+    Ares = Ares + 3
+elif q1 == 3:
+    Athena = Athena + 3
+elif q1 == 4:
+    Hades = Hades + 3
+elif q1 == 5:
+    Poseidon = Poseidon + 3
+elif q1 == 6:
+    Apollo = Apollo + 3
+elif q1 == 7:
+    Hephaestus = Hephaestus + 1
+else: 
+    print("Invalid Response, Try Restarting")
+q2 = int(input("Which of these describes you best? Funny(1), Serious(2), Smart(3), or Crafty(4)"))#finish here
+if q2 == 1:
+    Apollo = Apollo + 3
+    Ares = Ares + 1
+elif q2 == 2:
+    Zeus = Zeus + 3
+    Hera = Hera + 2
+    Ares = Ares + 1
+    Artemis = Artemis + 2
+    Athena = Athena + 3
+    Hades = Hades + 2
+    Poseidon = Poseidon + 2
+elif q2 == 3:
+    Athena = Athena + 5
+elif q2 == 4:
+    Hephaestus = Hephaestus + 4
+    Athena = Athena + 5 #she is the goddess of crafts
+    Demeter = Demeter + 2
+else:
+    print("Invalid Answer. Please Restart.")
+
+q3 = int(input("Would you rather be a Pilot(1), in the Army(2), Doctor(3), Farmer(4), Fisherman(5), or Blacksmith(6)"))
+if q3 == 1:
+    Apollo = Apollo + 3
+    Zeus = Zeus + 5
+elif q3 == 2: 
+    Ares = Ares + 5
+    Athena = Athena + 3
+    Hades = Hades + 3
+elif q3 == 3:
+    Hades = Hades + 2
+    Hermes = Hermes + 8
+elif q3 == 4:
+    Demeter = Demeter = 8
+elif q3 == 5:
+    Poseidon = Poseidon + 8
+elif q3 == 6:
+    Hephaestus = Hephaestus + 10
+else: 
+    print("Invalid Answer. Please Restart")
+
+q4 = int(input("Which of these elements do you feel most connected to? Fire(1), Water(2), Air(3), Earth(4): "))
+if q4 == 1:
+    Hephaestus += 3
+    Ares += 2
+    Apollo += 1
+    Zeus += 1
+elif q4 == 2:
+    Poseidon += 3
+    Aphrodite += 2
+    Demeter += 1
+    Hera += 1
+elif q4 == 3:
+    Zeus += 2
+    Hermes += 2
+    Athena += 1
+    Apollo += 1
+elif q4 == 4:
+    Demeter += 3
+    Hera += 2
+    Athena += 1
+    Artemis += 1
+else:
+    print("Invalid Answer. Please Restart.")
+
+q5 = int(input("Pick a hobby: Reading(1), Sports(2), Music(3), Gardening(4): "))
+if q5 == 1:
+    Athena += 3
+elif q5 == 2:
+    Ares += 3
+    Apollo += 2
+    Hermes += 1
+elif q5 == 3:
+    Apollo += 3
+    Aphrodite += 2
+    Hermes += 1
+elif q5 == 4:
+    Demeter += 10
+else:
+    print("Invalid Answer. Please Restart.")
+
+q6 = int(input("Pick your favorite color: Blue(1), Red(2), Green(3), Yellow(4): "))
+if q6 == 1:
+    Poseidon += 3
+    Hermes += 2
+elif q6 == 2:
+    Ares += 3
+    Aphrodite += 2
+    Hera += 1
+elif q6 == 3:
+    Demeter += 3
+    Artemis += 1
+elif q6 == 4:
+    Apollo += 3
+    Zeus += 2
+    Hermes += 1
+else:
+    print("Invalid Answer. Please Restart.")
+
+q7 = int(input("If you were going to battle, what would you bring?: Sword(1), Bow and Arrow(2), Staff(3), Shield(4): "))
+if q7 == 1:
+    Ares += 3
+    Athena += 2
+    Hermes += 1
+elif q7 == 2:
+    Artemis += 3
+    Apollo += 2
+elif q7 == 3:
+    Hermes += 5
+elif q7 == 4:
+    Athena += 3
+    Hephaestus += 2
+    Ares += 1
+else:
+    print("Invalid Answer. Please Restart.")
+
+
+gods = {
+    "Zeus": Zeus,
+    "Hera": Hera,
+    "Aphrodite": Aphrodite,
+    "Apollo": Apollo,
+    "Ares": Ares,
+    "Artemis": Artemis,
+    "Athena": Athena,
+    "Hades": Hades,
+    "Hermes": Hermes,
+    "Poseidon": Poseidon,
+    "Demeter": Demeter,
+    "Hephaestus": Hephaestus
+}
+
+youAre = max(gods, key=gods.get)
+
+print("You are the god " + youAre)
